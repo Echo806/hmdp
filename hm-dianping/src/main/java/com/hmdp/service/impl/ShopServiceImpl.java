@@ -46,7 +46,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
     @Override
     public Result queryById(Long id) {
-        //缓存穿透
+        //缓存穿透//用缓存空值解决缓存穿透
 //        Shop shop=cacheClient.
 //                queryWithPassThrough(CACHE_SHOP_KEY,id, Shop.class,this::getById,CACHE_SHOP_TTL,TimeUnit.MINUTES);
         //id2->getById(id2)也可以写成//这里之所以要写id2是因为前面参数已经有一个id了
